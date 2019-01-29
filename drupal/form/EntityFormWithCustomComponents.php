@@ -7,8 +7,6 @@ use Drupal\Core\Entity\EntityRepositoryInterface;
 use Drupal\Core\Entity\EntityTypeBundleInfoInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\TempStore\PrivateTempStoreFactory;
-use Drupal\iucn_assessment\Plugin\AssessmentWorkflow;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 class EntityFormWithCustomComponents extends ContentEntityForm {
