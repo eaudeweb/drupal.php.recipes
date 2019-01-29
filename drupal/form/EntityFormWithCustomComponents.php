@@ -28,7 +28,7 @@ class EntityFormWithCustomComponents extends ContentEntityForm {
   /** @var \Drupal\Core\Entity\Display\EntityFormDisplayInterface|null  */
   protected $nodeFormDisplay;
 
-  public function __construct(EntityRepositoryInterface $entity_repository, EntityTypeBundleInfoInterface $entity_type_bundle_info = NULL, TimeInterface $time = NULL, EntityFormBuilderInterface $entity_form_builder = NULL, EntityTypeManagerInterface $entityTypeManager = NULL, PrivateTempStoreFactory $temp_store_factory = NULL, AssessmentWorkflow $assessmentWorkflow = NULL) {
+  public function __construct(EntityRepositoryInterface $entity_repository, EntityTypeBundleInfoInterface $entity_type_bundle_info = NULL, TimeInterface $time = NULL, EntityFormBuilderInterface $entity_form_builder = NULL, EntityTypeManagerInterface $entityTypeManager = NULL) {
     parent::__construct($entity_repository, $entity_type_bundle_info, $time);
     $this->setEntityTypeManager($entityTypeManager);
     $this->entityFormBuilder = $entity_form_builder;
@@ -53,9 +53,7 @@ class EntityFormWithCustomComponents extends ContentEntityForm {
       $container->get('entity_type.bundle.info'),
       $container->get('datetime.time'),
       $container->get('entity.form_builder'),
-      $container->get('entity_type.manager'),
-      $container->get('tempstore.private'),
-      $container->get('iucn_assessment.workflow')
+      $container->get('entity_type.manager')
     );
   }
 
