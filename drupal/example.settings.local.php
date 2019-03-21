@@ -19,6 +19,8 @@ $settings['trusted_host_patterns'] = [
 
 $settings['hash_salt'] = 'secret-hash-salt';
 
+$settings['file_public_base_url'] = 'http://project.local/sites/default/files';
+
 # Site mail
 $config['system.site']['mail'] = 'user@example.ro';
 
